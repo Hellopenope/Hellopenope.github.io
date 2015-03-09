@@ -189,8 +189,8 @@ body {
 .project-cubes img {
   margin: 0 auto;
   display: inline-block;
-  width: inherit;
-  max-height: 150px;
+  width: auto;
+  height: 150px;
   padding: 0 10px 0 10px;
 }
 
@@ -271,8 +271,19 @@ body {
  =================*/
 
 @media (max-width: 575px) {
-  .container1 {
-    width: 300px;
+  .project-cubes {
+    width: 325px;
+    height: auto;
+  }
+  .project-cubes img {
+    width: 325px;
+    height: auto;
+  }
+  .contact-container {
+    padding: 35px 0 35px 0;
+  }
+  .contact-links td {
+    padding: 5px 10px 0px 10px;
   }
 }
 
@@ -282,17 +293,12 @@ body {
     position: fixed;
     top: 0;
   }
-  .footer {
-    position: fixed;
-    bottom: 0;
-  }
   /* Start the vertical centering */
-  .site-wrapper-inner {
+  .site-wrapper {
     vertical-align: middle;
   }
   /* Handle the widths */
   .masthead,
-  .footer,
   .about-container,
   .projects-container,
   .contacts-container {
