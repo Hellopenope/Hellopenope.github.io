@@ -40,7 +40,7 @@ body {
 
 /* Padding for spacing */
 .content-container {
-  padding: 100px 0 350px 0;
+  padding: 100px 0 550px 0;
 }
 
 /*========
@@ -203,7 +203,7 @@ body {
  =================*/
 
  #contact.content-container {
-  padding-bottom: 450px;
+  padding-bottom: 650px;
  }
 
 .contact-container {
