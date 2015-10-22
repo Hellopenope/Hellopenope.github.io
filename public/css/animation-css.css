@@ -1,0 +1,348 @@
+/*=========
+ * Globals
+ ========*/
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #000;
+}
+
+/*================
+ * Base structure
+ ================*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #FFF;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  vertical-align: top;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.content-container {
+  padding: 0 85px;
+  background-color: #fff;
+}
+
+/* Section container styles */
+.inner-container {
+  font-family: 'Comfortaa', sans-serif;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+/* Section heading styles */
+.section-heading {
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  font-size: 48px;
+  line-height: 0;
+  padding-bottom: 10px;
+}
+
+/*====================
+ * Initial nav screen
+ ===================*/
+
+.section-circles {
+  font-family: 'Comfortaa', sans-serif;
+  margin: 0 auto;
+  padding: 150px 50px 0 50px;
+}
+.inner-circle {
+  height: 230px;
+  width: 300px;
+  /*box-shadow: 0 0 1em;*/
+  /*background-color: rgba(0,0,0,0.7);*/
+  text-align: center;
+  margin: 0 auto;
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.inner-circle > div:hover {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/*========
+ * Header
+ ========*/
+
+.header {
+  font-family: 'Nothing You Could Do', cursive;
+  position: fixed;
+  width: 100%;
+  z-index: -99;
+}
+.inner-header {
+  padding: 10px 30px 0px 30px;
+}
+.header-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 75px;
+}
+
+
+/*===============
+ * About Section
+ ==============*/
+
+ #about {
+  display: none;
+ }
+.fix-about {
+  position: fixed;
+  top: 56px;
+}
+.lead {
+  padding-top: 30px;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.about-container {
+  padding: 35px;
+}
+.lead a {
+  color: rgba(0,0,0,0.6);
+}
+.lead a:hover {
+  text-decoration: none;
+  /*color: rgba(0, 0, 0, 0.2);*/
+  color: rgba(150, 50, 250, 0.6);
+}
+.lead a:focus a:visited a:active {
+  text-decoration: none;
+}
+
+/*==================
+ * Projects Section
+ =================*/
+
+#projects {
+  display: none;
+}
+.projects-container {
+  padding: 35px 10px 35px 10px;
+}
+.projects-row {
+  padding-top: 20px;
+  display: inline-block;
+}
+.project-cubes {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  padding: 1px;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.project-cubes img {
+  margin: 0 auto;
+  display: inline-block;
+  width: auto;
+  height: 150px;
+  padding: 0 10px 0 10px;
+  border-bottom: 1px solid black;
+}
+.project-cubes img:hover {
+  opacity: 0.8;
+}
+
+/*==================
+ * Contacts Section
+ =================*/
+
+#contact {
+  display: none;
+}
+.contact-container {
+  padding: 35px 35px 25px 35px;
+}
+.contact-links {
+  padding: 30px 110px 0 110px;
+}
+.contact-links img {
+  width: 60px;
+  padding: 5px;
+  opacity: 0.8;
+}
+.contact-links img:hover {
+  opacity: 0.5;
+}
+.contact-links a {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.contact-links a:hover {
+  text-decoration: none;
+}
+.contact-links img:visited img:active img:focus a:visited a:active a:focus {
+  text-decoration: none;
+}
+.contact-text {
+  height: 21px;
+  padding: 0 110px;
+  font-size: 18px;
+}
+.deep-contact {
+  display: none;
+}
+
+/*==================
+ * Compress Nav bar
+ =================*/
+
+.compressed-sections {
+  font-family: 'Comfortaa', sans-serif;
+  margin: 0 auto;
+  padding: 15px 85px;
+  display: none;
+}
+.inner-comp {
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 20px;
+}
+.deep-comp {
+  width: 85px;
+  margin: 0 auto;
+}
+.deep-comp:hover {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/*==================
+ * Affix and center
+ =================*/
+
+@media (max-width: 489px) {
+  .header-brand {
+    font-size: 45px;
+  }
+  .section-circles {
+    padding: 160px 20px 0 20px;
+  }
+  .inner-circle {
+    height: 100px;
+  }
+  .inner-circle > div:hover {
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .content-container {
+    padding: 0 20px;
+  }
+  .lead a {
+    color: rgba(150, 50, 250, 0.6);
+  }
+  .project-cubes {
+    width: 275px;
+    height: auto;
+  }
+  .project-cubes img {
+    width: 275px;
+    height: auto;
+  }
+  .project-cubes img:hover {
+    opacity: 1;
+  }
+  .contact-container {
+    padding: 35px 0 35px 0;
+  }
+  .contact-links {
+    padding: 30px 30px 0px 30px;
+  }
+  .contact-links img:hover {
+    opacity: 0.8;
+  }
+  .twitter-link, .github-link {
+    padding-top: 20px;
+  }
+  .compressed-sections {
+    padding: 15px 20px;
+  }
+  .deep-comp:hover {
+    color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+@media (min-width: 490px) and (max-width: 767px) {
+  .site-wrapper {
+    vertical-align: middle;
+  }
+  .header-brand {
+    font-size: 55px;
+  }
+  .section-circles {
+    padding-top: 120px;
+  }
+  .inner-circle {
+    height: 100px;
+    width: 100px;
+  }
+  .contact-links {
+    padding: 30px 35px 0px 35px;
+  }
+  .twitter-link, .github-link {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Start the vertical centering */
+  .site-wrapper {
+    vertical-align: middle;
+  }
+  .inner-circle {
+    height: 100px;
+    width: 100px;
+  }
+  /* Handle the widths */
+  .about-container,
+  .projects-container,
+  .contacts-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  .contact-links {
+    padding: 30px 50px 20px 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-container,
+  .projects-container,
+  .contact-container {
+    width: 100%;
+  }
+}

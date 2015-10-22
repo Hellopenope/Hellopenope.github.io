@@ -1,0 +1,13 @@
+# ignore these folders
+######################
+node_modules
+
+# ignore these files
+####################
+package.json
+server.js
+custom.css
+sticky.js
+customJQ.js
+IMG_2706.jpg
+IMG_2706bw.jpg
