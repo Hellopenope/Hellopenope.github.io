@@ -20,8 +20,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu|Comfortaa:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-    <link href="public/css/animation-css.css" rel="stylesheet">
-    <script src="public/js/sectionAnimations.js" type="text/javascript"></script>
+    <link href="stylesheets/app.css" rel="stylesheet">
+    <script src="javascripts/sectionAnimations.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -44,65 +44,57 @@
       -->
 
       <div class="header">
-        <div class="inner-header">
-          <div class="header-brand"><div>mike wroblewski</div></div>
-        </div>
+        <div class="header-text">mike wroblewski</div>
       </div>
 
-      <div class="row section-circles">
-        <div class="outter-circle about-circle col-md-4">
-          <div class="inner-circle"><div>about.</div></div>
-        </div>
-        <div class="outter-circle projects-circle col-md-4">
-          <div class="inner-circle"><div>projects.</div></div>
-        </div>
-        <div class="outter-circle contact-circle col-md-4">
-          <div class="inner-circle"><div>contact.</div></div>
-        </div>
+      <div class="row landing-container">
+        <div class="landing-nav about col-md-4"><span>about.</span></div>
+        <div class="landing-nav projects col-md-4"><span>projects.</span></div>
+        <div class="landing-nav contact col-md-4"><span>contact.</span></div>
       </div>
 
-      <div id="about" class="content-container">
-        <div class="inner-container about-container">
+      <div id="about" class="section">
+        <div class="container about-container">
           <h1 class="section-heading">about.</h1>
           <p class="lead">web developer, <a href="http://paperbrain.bandcamp.com" target="_blank">musician</a>, outdoor enthusiast, and basketball junkie.</p>
         </div>
       </div>
 
-      <div id="projects" class="content-container">
-        <div class="inner-container projects-container">
+      <div id="projects" class="section">
+        <div class="container projects-container">
           <h1 class="section-heading">projects.</h1>
             <div class="row projects-row">
               <div class="col-md-4 project-cubes">
                 <h3>memory game</h3>
-                <a href="memory/memory.html" target="_blank"><img src="public/img/memory_screenshot.png"></a>
+                <a href="memory/memory.html" target="_blank"><img src="images/memory_screenshot.png"></a>
               </div>                
               <div class="col-md-4 project-cubes">
                 <h3>letefeed</h3>
-                <a href="http://letefeed.herokuapp.com" target="_blank"><img src="public/img/letefeed_screenshot.png"></a>
+                <a href="http://letefeed.herokuapp.com" target="_blank"><img src="images/letefeed_screenshot.png"></a>
               </div>
               <div class="col-md-4 project-cubes">
                 <h3>statscrape</h3>
-                <a href="https://github.com/Hellopenope/statscrape" target="_blank"><img src="public/img/statscrape_screenshot.png"></a>
+                <a href="https://github.com/Hellopenope/statscrape" target="_blank"><img src="images/statscrape_screenshot.png"></a>
               </div>
             </div>
         </div>
       </div>
 
-      <div id="contact" class="content-container">
-        <div class="inner-container contact-container">
+      <div id="contact" class="section">
+        <div class="container contact-container">
           <h1 class="section-heading">contact.</h1>
           <div class="row contact-links">
             <div class="inner-contact-links email-link col-md-3 col-sm-3 col-xs-6">
-              <a href="mailto:mike.j.wroblewski@gmail.com" class="col-xs-12"><img src="public/img/email_icon.png" class="email"></a>
+              <a href="mailto:mike.j.wroblewski@gmail.com" class="col-xs-12"><img src="images/email_icon.png" class="email"></a>
             </div>
             <div class="inner-contact-links linkedin-link col-md-3 col-sm-3 col-xs-6">
-              <a href="http://www.linkedin.com/pub/michael-wroblewski/a4/b71/ba8/" target="_blank"><img src="public/img/linkedin_icon.png" class="linkedin"></a>
+              <a href="http://www.linkedin.com/pub/michael-wroblewski/a4/b71/ba8/" target="_blank"><img src="images/linkedin_icon.png" class="linkedin"></a>
             </div>
             <div class="inner-contact-links twitter-link col-md-3 col-sm-3 col-xs-6">
-              <a href="https://twitter.com/Hellopenope" target="_blank"><img src="public/img/twitter_icon.png" class="twitter"></a>
+              <a href="https://twitter.com/Hellopenope" target="_blank"><img src="images/twitter_icon.png" class="twitter"></a>
             </div>
             <div class="inner-contact-links github-link col-md-3 col-sm-3 col-xs-6">
-              <a href="https://github.com/Hellopenope" target="_blank"><img src="public/img/github_icon.png" class="github"></a>
+              <a href="https://github.com/Hellopenope" target="_blank"><img src="images/github_icon.png" class="github"></a>
             </div>
           </div>
           <div class="row contact-text hidden-xs hidden-sm">

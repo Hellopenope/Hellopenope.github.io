@@ -9,6 +9,10 @@ a:hover {
   color: #000;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 /*================
  * Base structure
  ================*/
@@ -39,13 +43,14 @@ body {
 }
 
 /* Padding for spacing */
-.content-container {
-  padding: 0 85px;
+.section {
+  margin: 0 auto;
+  max-width: 1180px;
   background-color: #fff;
 }
 
 /* Section container styles */
-.inner-container {
+.container {
   font-family: 'Comfortaa', sans-serif;
   margin: 0 auto;
   border: 1px solid black;
@@ -54,37 +59,30 @@ body {
 /* Section heading styles */
 .section-heading {
   color: rgba(0, 0, 0, 0.9);
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 1px 1px rgba(0,0,0,.5);
   font-size: 48px;
-  line-height: 0;
-  padding-bottom: 10px;
 }
 
 /*====================
  * Initial nav screen
  ===================*/
 
-.section-circles {
+.landing-container {
   font-family: 'Comfortaa', sans-serif;
   margin: 0 auto;
-  padding: 150px 50px 0 50px;
+  max-width: 1180px;
 }
-.inner-circle {
-  height: 230px;
-  width: 300px;
-  /*box-shadow: 0 0 1em;*/
-  /*background-color: rgba(0,0,0,0.7);*/
-  text-align: center;
-  margin: 0 auto;
-  font-size: 48px;
+.landing-nav {
   color: rgba(0, 0, 0, 0.9);
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  font-size: 48px;
+  height: 230px;
+  line-height: 5em;
+  margin: 0 auto;
+  text-shadow: 0 1px 1px rgba(0,0,0,.5);
 }
-.inner-circle > div:hover {
-  color: rgba(0, 0, 0, 0.2);
+.landing-nav span:hover {
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
 /*========
@@ -93,19 +91,14 @@ body {
 
 .header {
   font-family: 'Nothing You Could Do', cursive;
-  position: fixed;
-  width: 100%;
-  z-index: -99;
+  margin: 0 auto;
+  max-width: 1180px;
 }
-.inner-header {
-  padding: 10px 30px 0px 30px;
-}
-.header-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.header-text {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   color: rgba(0, 0, 0, 0.9);
   font-size: 75px;
+  padding: 10px 0;
 }
 
 
@@ -122,14 +115,13 @@ body {
 }
 .lead {
   padding-top: 30px;
-  color: rgba(0, 0, 0, 0.6);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.9);
 }
 .about-container {
   padding: 35px;
 }
 .lead a {
-  color: rgba(0,0,0,0.6);
+  font-weight: bold;
 }
 .lead a:hover {
   text-decoration: none;
@@ -156,7 +148,7 @@ body {
 }
 .project-cubes {
   color: rgba(0, 0, 0, 0.6);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   display: inline-block;
   padding: 1px;
   width: 300px;
@@ -184,7 +176,7 @@ body {
   display: none;
 }
 .contact-container {
-  padding: 35px 35px 25px 35px;
+  padding: 15px 35px 25px 35px;
 }
 .contact-links {
   padding: 30px 110px 0 110px;
@@ -228,7 +220,7 @@ body {
 }
 .inner-comp {
   color: rgba(0, 0, 0, 0.9);
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
   height: 50px;
   text-align: center;
   margin: 0 auto;
@@ -240,18 +232,19 @@ body {
   margin: 0 auto;
 }
 .deep-comp:hover {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 /*==================
- * Affix and center
+ * Media Queries
  =================*/
 
 @media (max-width: 489px) {
   .header-brand {
     font-size: 45px;
   }
-  .section-circles {
+  .landing-container {
     padding: 160px 20px 0 20px;
   }
   .inner-circle {
@@ -260,7 +253,7 @@ body {
   .inner-circle > div:hover {
     color: rgba(0, 0, 0, 0.9);
   }
-  .content-container {
+  .section {
     padding: 0 20px;
   }
   .lead a {
@@ -304,7 +297,7 @@ body {
   .header-brand {
     font-size: 55px;
   }
-  .section-circles {
+  .landing-container {
     padding-top: 120px;
   }
   .inner-circle {

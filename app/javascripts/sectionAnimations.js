@@ -1,13 +1,13 @@
 // Section Animations
 $(function(){
 	// Initial stat of page - click to bring up main content of section
-	$(".inner-circle").click(function(){
+	$(".landing-nav").click(function(){
 		
 		var self = $(this);
-		var sibs = $(this).parent().siblings();
+		var sibs = $(this).siblings();
 
 		populateComp(sibs);
-		$(".outter-circle").slideUp("slow");
+		$(".landing-nav").slideUp("slow");
 		displaySection(self);
 		$("div").promise().done(function() {
 			$(".compressed-sections").slideDown("slow");
@@ -31,10 +31,10 @@ $(function(){
 	$(".deep-comp").click(function(){
 
 		var self = $(this);
-		var targetClass = "."+self.text().replace(/\./g, "")+"-circle";
+		var targetClass = "."+self.text().replace(/\./g, "");
 		var sibs = $(targetClass).siblings();
 
-		$(".content-container").slideUp("slow");
+		$(".section").slideUp("slow");
 		displaySection(self);
 		populateComp(sibs);
 	});
@@ -56,9 +56,3 @@ $(function(){
 		}
 	});
 });
-
-
-
-
-
-
