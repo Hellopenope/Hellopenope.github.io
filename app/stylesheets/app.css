@@ -42,6 +42,22 @@ body {
   margin-left: auto;
 }
 
+/*========
+ * Header
+ ========*/
+
+.header {
+  font-family: 'Nothing You Could Do', cursive;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+.header-text {
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 75px;
+  padding: 10px 0;
+}
+
 /* Padding for spacing */
 .section {
   margin: 0 auto;
@@ -67,39 +83,29 @@ body {
  ===================*/
 
 .landing-container {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   font-family: 'Comfortaa', sans-serif;
   margin: 0 auto;
   max-width: 1180px;
 }
 .landing-nav {
   color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  transition: all 1s;
+}
+.landing-nav.big {
   font-size: 48px;
   height: 230px;
-  line-height: 5em;
-  margin: 0 auto;
-  text-shadow: 0 1px 1px rgba(0,0,0,.5);
+  line-height: 230px;
 }
-.landing-nav span:hover {
-  color: rgba(0, 0, 0, 0.4);
-  cursor: pointer;
+.landing-nav.selected span {
+  font-weight: 600;
 }
-
-/*========
- * Header
- ========*/
-
-.header {
-  font-family: 'Nothing You Could Do', cursive;
-  margin: 0 auto;
-  max-width: 1180px;
-}
-.header-text {
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 75px;
-  padding: 10px 0;
-}
-
 
 /*===============
  * About Section
@@ -108,12 +114,8 @@ body {
  #about {
   display: none;
  }
-.fix-about {
-  position: fixed;
-  top: 56px;
-}
 .lead {
-  padding-top: 30px;
+  padding-top: 90px;
   color: rgba(0, 0, 0, 0.9);
 }
 .about-container {
@@ -147,7 +149,6 @@ body {
 }
 .project-cubes {
   color: rgba(0, 0, 0, 0.6);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   display: inline-block;
   padding: 1px;
   width: 300px;
@@ -178,7 +179,7 @@ body {
   padding: 15px 35px 25px 35px;
 }
 .contact-links {
-  padding: 30px 110px 0 110px;
+  padding: 90px 110px 0 110px;
 }
 .contact-links img {
   width: 60px;
@@ -208,49 +209,12 @@ body {
 }
 
 /*==================
- * Compress Nav bar
- =================*/
-
-.compressed-sections {
-  font-family: 'Comfortaa', sans-serif;
-  margin: 0 auto;
-  padding: 15px 85px;
-  display: none;
-}
-.inner-comp {
-  color: rgba(0, 0, 0, 0.9);
-  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
-  height: 50px;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px;
-  font-size: 20px;
-}
-.deep-comp {
-  width: 85px;
-  margin: 0 auto;
-}
-.deep-comp:hover {
-  color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-/*==================
  * Media Queries
  =================*/
 
 @media (max-width: 489px) {
-  .header-brand {
-    font-size: 45px;
-  }
   .landing-container {
     padding: 160px 20px 0 20px;
-  }
-  .inner-circle {
-    height: 100px;
-  }
-  .inner-circle > div:hover {
-    color: rgba(0, 0, 0, 0.9);
   }
   .section {
     padding: 0 20px;
@@ -281,27 +245,14 @@ body {
   .twitter-link, .github-link {
     padding-top: 20px;
   }
-  .compressed-sections {
-    padding: 15px 20px 35px 20px;
-  }
-  .deep-comp:hover {
-    color: rgba(0, 0, 0, 0.9);
-  }
 }
 
 @media (min-width: 490px) and (max-width: 767px) {
   .site-wrapper {
     vertical-align: middle;
   }
-  .header-brand {
-    font-size: 55px;
-  }
   .landing-container {
     padding-top: 120px;
-  }
-  .inner-circle {
-    height: 100px;
-    width: 100px;
   }
   .contact-links {
     padding: 30px 35px 0px 35px;
@@ -315,10 +266,6 @@ body {
   /* Start the vertical centering */
   .site-wrapper {
     vertical-align: middle;
-  }
-  .inner-circle {
-    height: 100px;
-    width: 100px;
   }
   /* Handle the widths */
   .about-container,
