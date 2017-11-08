@@ -96,7 +96,9 @@ body {
   height: 30px;
   line-height: 30px;
   margin: 0 auto;
+  -moz-transition: all 1s;
   -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
 .landing-nav.big {
