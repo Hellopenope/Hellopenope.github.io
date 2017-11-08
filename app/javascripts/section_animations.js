@@ -2,9 +2,8 @@
 $(function(){
 	// Initial stat of page - click to bring up main content of section
 	$(".landing-nav").click(function(){
-		
-		var self = $(this);
-		var sibs = $(this).siblings();
+		var self = $(this),
+				sibs = $(this).siblings();
 
 		populateComp(sibs);
 		$(".landing-nav").slideUp("slow");
@@ -15,9 +14,8 @@ $(function(){
 	});
 	// Populates hidden section links below active section
 	function populateComp(sibs) {
-
-		var textOne = $(sibs[0]).children().text();
-		var textTwo = $(sibs[1]).children().text();
+		var textOne = $(sibs[0]).children().text(),
+				textTwo = $(sibs[1]).children().text();
 		
 		$(".comp-one").text(textOne);
 		$(".comp-two").text(textTwo);
@@ -29,10 +27,9 @@ $(function(){
 	};
 	// Hidden section - click to activate a different section
 	$(".deep-comp").click(function(){
-
-		var self = $(this);
-		var targetClass = "."+self.text().replace(/\./g, "");
-		var sibs = $(targetClass).siblings();
+		var self = $(this),
+				targetClass = "."+self.text().replace(/\./g, ""),
+				sibs = $(targetClass).siblings();
 
 		$(".section").slideUp("slow");
 		displaySection(self);
@@ -41,18 +38,10 @@ $(function(){
 
 	// Contact links - hover will slide down text of given image/link
 	$(".inner-contact-links").find("img").hover(function(){
-
-		var classText = "."+$(this).attr("class")+"-text";
-
-		if (classText !== "undefined-text") {
-			$(classText).parent().show("slide", {direction: "up"}, 500);
-		}
+		var classText = $(this).attr('class');
+		if (classText) $("."+classText+"-text").parent().show("slide", {direction: "up"}, 500);
 	}, function() {
-
-		var classText = "."+$(this).attr("class")+"-text";
-
-		if (classText !== "undefined-text") {
-			$(classText).parent().hide("slide", {direction: "up"}, 500);
-		}
+		var classText = $(this).attr('class');
+		if (classText) $("."+classText+"-text").parent().hide("slide", {direction: "up"}, 500);
 	});
 });
