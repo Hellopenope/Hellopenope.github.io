@@ -1,0 +1,50 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <!--  -->
+      <th>Total Points</th>
+      <th>Total Winnings</th>
+      <th>Games Correct</th>
+      <!--  -->
+      <th>Confidence %</th>
+      <th>$5 Bet/ Conf Point</th>
+      <th>% Correct</th>
+      <th>Pts Per Correct Pick</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% users.forEach(function(user) { %>
+      <tr>
+        <td>
+          <a href="#" hx-get="/users/<%= user.uuid %>" hx-target="#main">
+            <%= user.name %>
+          </a>
+        </td>
+        <!--  -->
+        <td>
+          <%= user.totalPoints %>
+        </td>
+        <td>
+          <%= user.totalWinnings %>
+        </td>
+        <td>
+          <%= user.gamesCorrect %>
+        </td>
+        <!--  -->
+        <td>
+          <%= user.confidencePercent %>
+        </td>
+        <td>
+          <%= user.fiveDollarBetPerConfPoint %>
+        </td>
+        <td>
+          <%= user.percentCorrect %>
+        </td>
+        <td>
+          <%= user.ptsPerCorrectPick %>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
