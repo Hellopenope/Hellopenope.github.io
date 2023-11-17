@@ -15,6 +15,7 @@ export class AppController {
     const users = new UserStandingsGetResponseDto([
       {
         uuid: 'some-uuid-1',
+        rank: 1,
         name: 'Kirby',
         totalPoints: 182,
         totalWinnings: 45.0,
@@ -26,6 +27,7 @@ export class AppController {
       },
       {
         uuid: 'some-uuid-2',
+        rank: 2,
         name: 'Loren',
         totalPoints: 177,
         totalWinnings: 27.5,

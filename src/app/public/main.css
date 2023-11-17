@@ -5,16 +5,69 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  display: grid;
+  justify-items: center;
+}
+
 nav {
   & ul {
-      list-style-type: none;
-      display: flex;
-      padding: 0;
-      flex: 0 0 auto;
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    flex: 0 0 auto;
   }
 
   & ul li {
-      display: inline-block;
-      margin: .25em;
+    display: inline-block;
+    margin: .25em;
   }
+}
+
+section.content {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 13px;
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,Arial,Helvetica Neue,Helvetica,sans-serif;
+
+  & thead {
+    background: #eaecec;
+    vertical-align: bottom;
+  }
+
+  & th,
+  td {
+    border: solid thin lightgray;
+    padding: 3px;
+    text-align: left;
+  }
+
+  & tbody {
+    & tr {
+      &:nth-child(odd) {
+        background-color: #eaecec;
+      }
+
+      &:hover {
+        background-color: #a5a7a7;
+      }
+    }
+  }
+}
+
+.width-40 {
+  width: 40px;
+}
+.width-60 {
+  width: 60px;
+}
+.width-80 {
+  width: 80px;
+}
+.width-100 {
+  width: 100px;
 }

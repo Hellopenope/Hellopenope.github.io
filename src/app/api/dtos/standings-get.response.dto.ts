@@ -5,6 +5,7 @@ class UserStandingsGetDto {
   constructor(dto: any) {
     this.uuid = dto.uuid;
     this.name = dto.name;
+    this.rank = dto.rank;
     this.totalPoints = dto.totalPoints;
     this.totalWinnings = numberToUSD(dto.totalWinnings);
     this.gamesCorrect = dto.gamesCorrect;
@@ -16,6 +17,7 @@ class UserStandingsGetDto {
 
   readonly uuid: string;
   readonly name: string;
+  readonly rank: number;
   readonly totalPoints: number;
   readonly totalWinnings: string;
   readonly gamesCorrect: number;

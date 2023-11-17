@@ -1,21 +1,27 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th class="width-40">Rank</th>
       <!--  -->
-      <th>Total Points</th>
-      <th>Total Winnings</th>
-      <th>Games Correct</th>
+      <th class="width-100">Name</th>
       <!--  -->
-      <th>Confidence %</th>
-      <th>$5 Bet/ Conf Point</th>
-      <th>% Correct</th>
-      <th>Pts Per Correct Pick</th>
+      <th class="width-40">Pts</th>
+      <th class="width-80">Winnings</th>
+      <th class="width-60">Games Correct</th>
+      <!--  -->
+      <th class="width-80">Confidence</th>
+      <th class="width-80">$5 Bet/ Conf Point</th>
+      <th class="width-60">Pct Correct</th>
+      <th class="width-60">Pts Per Correct Pick</th>
     </tr>
   </thead>
   <tbody>
     <% users.forEach(function(user) { %>
       <tr>
+        <td>
+          <%= user.rank %>
+        </td>
+        <!--  -->
         <td>
           <a href="#" hx-get="/users/<%= user.uuid %>" hx-target="#main">
             <%= user.name %>
