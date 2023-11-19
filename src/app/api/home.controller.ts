@@ -2,7 +2,7 @@ import { Controller, Get, Render } from '@nestjs/common';
 import { UserStandingsGetResponseDto } from './dtos/standings-get.response.dto';
 
 @Controller()
-export class AppController {
+export class HomeController {
   constructor() {}
 
   @Get()
@@ -36,6 +36,18 @@ export class AppController {
         fiveDollarBetPerConfPoint: 149.55,
         percentCorrect: 0.55,
         ptsPerCorrectPick: 4.21,
+      },
+      {
+        uuid: 'some-uuid-3',
+        rank: 3,
+        name: 'Mike',
+        totalPoints: 155,
+        totalWinnings: 23.75,
+        gamesCorrect: 40,
+        confidencePercent: 0.5,
+        fiveDollarBetPerConfPoint: 122.76,
+        percentCorrect: 0.47,
+        ptsPerCorrectPick: 3.91,
       },
     ]);
 
