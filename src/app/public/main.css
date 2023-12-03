@@ -29,24 +29,27 @@ header {
 
 nav {
   & ul {
-    list-style-type: none;
     display: flex;
-    padding: 0;
     flex: 0 0 auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 
   & ul li {
     display: inline-block;
-    margin: .5em;
+    padding-block-start: 1.25em;
+    padding-block-end: 1.25em;
 
     & a {
       text-decoration: none;
       color: #000;
-      padding: .5em;
-      border-radius: 5px;
+      padding: calc(1.25em - 2px);
+      /* border-radius: 5px; */
 
       &:hover {
-        background-color: #eaecec;
+        border-bottom: 2px inset black;
+        /* background-color: #eaecec; */
       }
     }
   }
